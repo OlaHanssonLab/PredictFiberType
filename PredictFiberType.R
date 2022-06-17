@@ -26,6 +26,9 @@ rownames(final_result)<-colnames(bulk_expr)
 final_result
 write.table(final_result,file="deconv_prediction.txt",col.names=TRUE,row.names=TRUE,quote=FALSE,sep="\t")
 
+
+if(length(args)==2) 
+{
 #Comparing predicted fraction of slow twitch (type1) with true values measured via e.g. fibertyping
 print("COMPARING TRUE VS. PREDICTED RESULTS")
 true_type1<-read.delim(args[2],header=TRUE,row.names=1,sep="\t")
@@ -44,3 +47,4 @@ cor_res<-cor.test(as.numeric(merged$slow_twitch),as.numeric(merged$TRUE_SLOW_TWI
 cor_res
 mtext(paste0("n = ",dim(na.omit(merged))[1],", Spearman correlation: rho = ",round(as.numeric(cor_res$estimate),2),", p-value = ",cor_res$p.value,""))
 dev.off()
+}
