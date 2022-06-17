@@ -1,7 +1,7 @@
 # PredictFiberType
-In this repository we upload codes to use for predicting skeletal muscle fibertype composition using bulk RNAseq data
+In this repository we upload the algorithm for predicting skeletal muscle fibertype composition from bulk RNAseq data.
 
-The main script is PredictFiberType.R which accepts a normalized and batch-corrected matrix of skeletal muscles bulk RNAseq expression and estimates fibertype (type 1 vs. type 2) composition for each sample. The script uses the **signature matrix** that was computed from snRNAseq on skeletal muscle fibers and contains cluster gene markers for type 1 and type 2 nuclei.
+The main script is PredictFiberType.R which accepts a **normalized and batch-corrected matrix of skeletal muscles bulk RNAseq expression values** and estimates fibertype (type 1 vs. type 2) composition for each sample. The script uses the **signature matrix** that was computed from snRNAseq on skeletal muscle fibers and contains cluster gene markers for type 1 and type 2 nuclei.
 
 Run this script as: **Rscript PredictFiberType.R bulk_expr.txt true_type1.txt**,
 
