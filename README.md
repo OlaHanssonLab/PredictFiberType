@@ -3,6 +3,8 @@ In this repository we upload the algorithm for predicting skeletal muscle fibert
 
 The main script is PredictFiberType.R which accepts a **normalized** and **batch-corrected** matrix of skeletal muscles bulk RNAseq expression values and estimates fibertype (type 1 vs. type 2) composition for each sample. The script uses the **signature matrix** that was computed from snRNAseq on skeletal muscle fibers and contains cluster gene markers for type 1 and type 2 nuclei.
 
+**Requirements:** installed R / Bioconductor package "DeconRNASeq": https://www.bioconductor.org/packages/release/bioc/html/DeconRNASeq.html
+
 Run this script as: **Rscript PredictFiberType.R bulk_expr.txt true_type1.txt**
 
 where:
